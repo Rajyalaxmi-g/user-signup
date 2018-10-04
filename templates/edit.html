@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="/formvalidate" method="post">
+        <label for="uname">Username:</label>
+        <input id="uname" type="text" name="usrname" value='{{usrname}}' />
+        <p class="error">{{username_error}}</p>
+            
+        <label for="pwd">Password:</label>
+        <input id="pwd" type="password" name="pwd">
+        <p class="error">{{password_error}}</p>
+          
+        <label for="vpwd">Verify Password:</label>
+        <input id="vpwd" type="password" name="vpwd"/>
+        <p class="error">{{verifypwd_error}}</p>
+           
+        <label for="email">Email(optional):</label>
+        <input id="email" type="text" name="emailid" value='{{emailid}}' />
+        <p class="error">{{email_error}}</p>
+         
+        <input type="submit" value="Submit">
+    </form>
+    
+
+{% endblock %}
